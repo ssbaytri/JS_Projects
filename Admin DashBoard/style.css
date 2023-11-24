@@ -211,3 +211,54 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+
+/*=========cards=========*/
+.card-box {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.card-box .card {
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.card-box .card .numbers {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.card-box .card .card-name {
+  color: var(--black2);
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+.card-box .card .box-icon {
+  font-size: 3.5rem;
+  color: var(--black2);
+}
+
+.card-box .card:hover {
+  background: var(--blue);
+}
+
+.card-box .card:hover .numbers,
+.card-box .card:hover .box-icon,
+.card-box .card:hover .card-name {
+  color: var(--white);
+}
