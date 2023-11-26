@@ -262,3 +262,122 @@ body {
 .card-box .card:hover .card-name {
   color: var(--white);
 }
+
+
+/*===========Order Details List===============*/
+.details {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+/*  margin-top: 10px;*/
+}
+
+.details .recent-orders {
+  position: relative;
+  display: grid;
+  min-height: 400px;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+
+.details .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-header h2{
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.card-header .btn {
+  position: relative;
+  background: var(--blue);
+  color: var(--white);
+  padding: 5px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.details table thead tr {
+  font-weight: 600;
+}
+
+.details .recent-orders table tr {
+  color: var(--black1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details .recent-orders table tr:last-child {
+  border-bottom: none;
+}
+
+.details .recent-orders table tbody tr:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.details .recent-orders table tr td {
+  padding: 10px;
+}
+
+.details .recent-orders table tr td:last-child {
+  text-align: end;
+}
+
+.details .recent-orders table tr td:nth-child(2) {
+  text-align: end;
+}
+
+.details .recent-orders table tr td:nth-child(3) {
+  text-align: center;
+}
+
+.status.delivered {
+  padding: 2px 4px;
+  background: #8de02c;
+  color: var(--white);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status.pending {
+  padding: 2px 4px;
+  background: #f9ca3f;
+  color: var(--white);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status.returned {
+  padding: 2px 4px;
+  background: #f00;
+  color: var(--white);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status.in-progress {
+  padding: 2px 4px;
+  background: #1795ce;
+  color: var(--white);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
