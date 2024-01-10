@@ -4,3 +4,40 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wordle .container {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.wordle .container .words .word .char {
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    border: 1px solid #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.wordle .container .words .word {
+    display: flex;
+    gap: 4px;
+}
+
+.wordle .container .words {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
