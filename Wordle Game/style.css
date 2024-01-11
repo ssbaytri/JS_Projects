@@ -22,18 +22,35 @@ body {
 .wordle .container .words .word .char {
     width: 40px;
     height: 40px;
-    background: #ccc;
+    background: #f2f2f2;
     border: 1px solid #111;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 16px;
     font-weight: 500;
+    text-transform: uppercase;
+}
+
+.wordle .container .words .word .char.default {
+    background: #787c7e;
+}
+
+.wordle .container .words .word .char.contains {
+    background: #ecd46b;
+}
+
+.wordle .container .words .word .char.match {
+    background: #6aaa64;
 }
 
 .wordle .container .words .word {
     display: flex;
     gap: 4px;
+}
+
+.wordle .container .words .word.active .char {
+    background: #ccc;
 }
 
 .wordle .container .words {
