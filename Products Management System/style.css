@@ -85,13 +85,21 @@ button {
     width: 100%;
     padding: 15px 25px;
     border-radius: 10px;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
     color: #fff;
-    background: #141E30;
+    background: #0b285f;
     cursor: pointer;
-    width: 100%;
-    margin: auto;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: .4s ease;
+}
+
+button:hover {
+    background: #0e3377;
+    transform: scale(1.01);
 }
 
 .inputs {
