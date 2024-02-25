@@ -145,6 +145,11 @@ table button {
     font-size: 15px;
     padding: 8px 13px;
     margin: 10px auto;
+    background: #154297;
+}
+
+table button:hover {
+    background: #4775c9;
 }
 
 table th {
