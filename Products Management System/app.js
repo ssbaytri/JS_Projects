@@ -23,13 +23,13 @@ function getTotal() {
         total.textContent = "0";
     }
 }
-
 price.addEventListener('input', getTotal);
 taxes.addEventListener('input', getTotal);
 ads.addEventListener('input', getTotal);
 discount.addEventListener('input', getTotal);
-
 // create products
+
+
 // save to local storage
 // clear inputs
 // read
