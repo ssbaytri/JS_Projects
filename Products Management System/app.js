@@ -48,11 +48,25 @@ submitBtn.onclick = function() {
         category: category.value
     }
     dataProfiles.push(newProfile);
+    // save to local storage
     localStorage.setItem("product", JSON.stringify(dataProfiles));
+    clearData();
 }
 
-// save to local storage
 // clear inputs
+function clearData() {
+    title.value = "";
+    price.value = "";
+    taxes.value = "";
+    ads.value = "";
+    discount.value = "";
+    total.textContent = "0";
+    total.style.background = "rgb(218, 18, 18)";
+    count.value = "";
+    category.value = "";
+
+}
+
 // read
 // count
 // delete
