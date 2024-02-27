@@ -18,17 +18,38 @@ function getTotal() {
         let totalValue = priceValue + taxesValue + adsValue - discountceValue;
         total.textContent = totalValue;
         total.style.background = "#040";
-    }else{
+    } else {
         total.style.background = "rgb(218, 18, 18)";
         total.textContent = "0";
     }
 }
-price.addEventListener('input', getTotal);
-taxes.addEventListener('input', getTotal);
-ads.addEventListener('input', getTotal);
-discount.addEventListener('input', getTotal);
+price.addEventListener("input", getTotal);
+taxes.addEventListener("input", getTotal);
+ads.addEventListener("input", getTotal);
+discount.addEventListener("input", getTotal);
 // create products
+let dataProfiles;
+if (localStorage.product != null) {
+    dataProfiles = JSON.parse(localStorage.product);
+}else{
+    dataProfiles = [];
+}
 
+
+submitBtn.onclick = function() {
+    let newProfile = {
+        title: title.value,
+        price: price.value,
+        taxes: taxes.value,
+        ads: ads.value,
+        discount: discount.value,
+        total: total.textContent,
+        count: count.value,
+        category: category.value
+    }
+    dataProfiles.push(newProfile);
+    localStorage.setItem("product", JSON.stringify(dataProfiles));
+}
 
 // save to local storage
 // clear inputs
