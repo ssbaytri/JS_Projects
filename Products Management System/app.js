@@ -51,6 +51,7 @@ submitBtn.onclick = function() {
     // save to local storage
     localStorage.setItem("product", JSON.stringify(dataProfiles));
     clearData();
+    showData();
 }
 
 // clear inputs
@@ -64,10 +65,32 @@ function clearData() {
     total.style.background = "rgb(218, 18, 18)";
     count.value = "";
     category.value = "";
-
 }
 
 // read
+function showData() {
+    let table = "";
+    let tbody = document.getElementById("tbody");
+    for (let i = 0;i < dataProfiles.length; i++) {
+        table += `
+        <tr>
+            <td>${i+1}</td>
+            <td>${dataProfiles[i].title}</td>
+            <td>${dataProfiles[i].price}</td>
+            <td>${dataProfiles[i].taxes}</td>
+            <td>${dataProfiles[i].ads}</td>
+            <td>${dataProfiles[i].discount}</td>
+            <td>${dataProfiles[i].total}</td>
+            <td>${dataProfiles[i].category}</td>
+            <td><button id="update">update</button></td>
+            <td><button id="delete">delete</button></td>
+        </tr>`;
+    }
+    tbody.innerHTML = table;
+}
+
+showData();
+
 // count
 // delete
 // update
