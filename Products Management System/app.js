@@ -87,6 +87,17 @@ function showData() {
         </tr>`;
     }
     tbody.innerHTML = table;
+    let deleteAllBtn = document.getElementById("deleteAll");
+    if (dataProfiles.length > 0) {
+        deleteAllBtn.innerHTML = `<button>Delete All</button>`
+    }else{
+        deleteAllBtn.innerHTML = "";
+    }
+    deleteAllBtn.addEventListener("click", function(){
+        dataProfiles = [];
+        localStorage.product = JSON.stringify(dataProfiles);
+        showData();
+    })
 }
 
 showData();

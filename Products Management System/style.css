@@ -105,6 +105,10 @@ button:hover {
     transform: scale(1.01);
 }
 
+#deleteAll {
+    margin: 20px auto;
+}
+
 .inputs {
     display: flex;
     flex-direction: column;
