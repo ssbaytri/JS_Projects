@@ -74,7 +74,7 @@ function showData() {
     for (let i = 0;i < dataProfiles.length; i++) {
         table += `
         <tr>
-            <td>${i+1}</td>
+            <td>${i}</td>
             <td>${dataProfiles[i].title}</td>
             <td>${dataProfiles[i].price}</td>
             <td>${dataProfiles[i].taxes}</td>
@@ -83,7 +83,7 @@ function showData() {
             <td>${dataProfiles[i].total}</td>
             <td>${dataProfiles[i].category}</td>
             <td><button id="update">update</button></td>
-            <td><button id="delete">delete</button></td>
+            <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
         </tr>`;
     }
     tbody.innerHTML = table;
@@ -91,8 +91,14 @@ function showData() {
 
 showData();
 
-// count
 // delete
+function deleteData(i) {
+    dataProfiles.splice(i, 1);
+    localStorage.product = JSON.stringify(dataProfiles);
+    showData();
+}
+
+// count
 // update
 // search
 // clean data
