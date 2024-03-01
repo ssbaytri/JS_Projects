@@ -47,7 +47,13 @@ submitBtn.onclick = function() {
         count: count.value,
         category: category.value
     }
-    dataProfiles.push(newProfile);
+    if(newProfile.count > 1) {
+        for(let i = 0; i < newProfile.count; i++) {
+            dataProfiles.push(newProfile);
+        }
+    }else{
+        dataProfiles.push(newProfile);
+    }
     // save to local storage
     localStorage.setItem("product", JSON.stringify(dataProfiles));
     clearData();
@@ -89,7 +95,7 @@ function showData() {
     tbody.innerHTML = table;
     let deleteAllBtn = document.getElementById("deleteAll");
     if (dataProfiles.length > 0) {
-        deleteAllBtn.innerHTML = `<button>Delete All</button>`
+        deleteAllBtn.innerHTML = `<button>Delete All(${dataProfiles.length})</button>`
     }else{
         deleteAllBtn.innerHTML = "";
     }
@@ -110,6 +116,8 @@ function deleteData(i) {
 }
 
 // count
+
+
 // update
 // search
 // clean data
