@@ -160,6 +160,7 @@ table th {
     text-transform: capitalize;
     font-size: 20px;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .tb-head th{

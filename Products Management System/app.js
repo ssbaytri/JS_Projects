@@ -8,6 +8,9 @@ let count = document.getElementById("count");
 let category = document.getElementById("category");
 let submitBtn = document.getElementById("submit");
 
+let mood = "create";
+let tmp;
+
 // get total
 function getTotal() {
     let priceValue = parseFloat(price.value) || 0;
@@ -47,12 +50,19 @@ submitBtn.onclick = function() {
         count: count.value,
         category: category.value
     }
-    if(newProfile.count > 1) {
-        for(let i = 0; i < newProfile.count; i++) {
+    if (mood === "create") {
+        if(newProfile.count > 1) {
+            for(let i = 0; i < newProfile.count; i++) {
+                dataProfiles.push(newProfile);
+            }
+        }else{
             dataProfiles.push(newProfile);
         }
     }else{
-        dataProfiles.push(newProfile);
+        dataProfiles[tmp] = newProfile;
+        mood = "create";
+        submitBtn.innerHTML = "Create";
+        count.style.display = "block";
     }
     // save to local storage
     localStorage.setItem("product", JSON.stringify(dataProfiles));
@@ -88,7 +98,7 @@ function showData() {
             <td>${dataProfiles[i].discount}</td>
             <td>${dataProfiles[i].total}</td>
             <td>${dataProfiles[i].category}</td>
-            <td><button id="update">update</button></td>
+            <td><button onclick="updateData(${i})" id="update">update</button></td>
             <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
         </tr>`;
     }
@@ -115,9 +125,26 @@ function deleteData(i) {
     showData();
 }
 
-// count
-
+// count : Done
 
 // update
+function updateData(i) {
+    title.value = dataProfiles[i].title;
+    price.value = dataProfiles[i].price;
+    taxes.value = dataProfiles[i].taxes;
+    ads.value = dataProfiles[i].ads;
+    discount.value = dataProfiles[i].discount;
+    getTotal();
+    count.style.display = "none";
+    category.value = dataProfiles[i].category;
+    submitBtn.innerHTML = "Update";
+    mood = "update";
+    tmp = i;
+    scroll({
+        top: 0,
+        behavior: "smooth"
+    })
+}
+
 // search
 // clean data
