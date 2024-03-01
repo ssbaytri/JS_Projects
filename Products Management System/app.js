@@ -147,4 +147,36 @@ function updateData(i) {
 }
 
 // search
+let searchMode = "title";
+let titleSearch = document.getElementById("search-title");
+let categorySearch = document.getElementById("search-category");
+let search = document.getElementById("search");
+search.disabled = true;
+
+function getSearchMode(id) {
+    if (id == titleSearch.id) {
+        searchMode = "title";
+        search.disabled = false;
+        search.placeholder = "Search By Title";
+    }else{
+        searchMode = "category";
+        search.disabled = false;
+        search.placeholder = "Search By Category";
+    }
+    search.focus()
+    console.log(searchMode);
+}
+
+search.addEventListener("blur", function(){
+    search.disabled = true;
+})
+
+titleSearch.onclick = function() {
+    getSearchMode(titleSearch.id);
+}
+
+categorySearch.onclick = function() {
+    getSearchMode(categorySearch.id);
+}
+
 // clean data
