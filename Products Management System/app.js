@@ -164,7 +164,53 @@ function getSearchMode(id) {
         search.placeholder = "Search By Category";
     }
     search.focus()
-    console.log(searchMode);
+}
+
+function searchData(value) {
+    let table = "";
+    let tbody = document.getElementById("tbody");
+    if(searchMode == "title"){
+        for(let i = 0; i < dataProfiles.length; i++){
+            if(dataProfiles[i].title.includes(value)){
+                table += `
+                    <tr>
+                        <td>${i}</td>
+                        <td>${dataProfiles[i].title}</td>
+                        <td>${dataProfiles[i].price}</td>
+                        <td>${dataProfiles[i].taxes}</td>
+                        <td>${dataProfiles[i].ads}</td>
+                        <td>${dataProfiles[i].discount}</td>
+                        <td>${dataProfiles[i].total}</td>
+                        <td>${dataProfiles[i].category}</td>
+                        <td><button onclick="updateData(${i})" id="update">update</button></td>
+                        <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
+                    </tr>`;
+            }
+        }
+    }else{
+        for(let i = 0; i < dataProfiles.length; i++){
+            if(dataProfiles[i].category.includes(value)){
+                table += `
+                    <tr>
+                        <td>${i}</td>
+                        <td>${dataProfiles[i].title}</td>
+                        <td>${dataProfiles[i].price}</td>
+                        <td>${dataProfiles[i].taxes}</td>
+                        <td>${dataProfiles[i].ads}</td>
+                        <td>${dataProfiles[i].discount}</td>
+                        <td>${dataProfiles[i].total}</td>
+                        <td>${dataProfiles[i].category}</td>
+                        <td><button onclick="updateData(${i})" id="update">update</button></td>
+                        <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
+                    </tr>`;
+            }
+        }
+    }
+    tbody.innerHTML = table;
+}
+
+search.onkeyup = function() {
+    searchData(this.value);
 }
 
 search.addEventListener("blur", function(){
@@ -173,10 +219,14 @@ search.addEventListener("blur", function(){
 
 titleSearch.onclick = function() {
     getSearchMode(titleSearch.id);
+    search.value = "";
+    showData();
 }
 
 categorySearch.onclick = function() {
     getSearchMode(categorySearch.id);
+    search.value = "";
+    showData();
 }
 
 // clean data
