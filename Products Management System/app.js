@@ -228,5 +228,3 @@ categorySearch.onclick = function() {
     search.value = "";
     showData();
 }
-
-// clean data
