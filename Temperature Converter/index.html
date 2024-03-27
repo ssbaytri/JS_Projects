@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Temperature Converter</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="input-box">
+            <h6>Celsius</h6>
+            <input type="number" id="celsius">
+        </div>
+        <ion-icon name="swap-horizontal-outline"></ion-icon>
+        <div class="input-box">
+            <h6>Fahrenheit</h6>
+            <input type="number" id="fahrenheit">
+        </div>
+    </div>
 </body>
 <script src="app.js"></script>
 </html>
