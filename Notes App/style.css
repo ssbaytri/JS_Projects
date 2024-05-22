@@ -1,14 +1,21 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
     background: #000046;
     background: -webkit-linear-gradient(to right, #1CB5E0, #000046);
     background: linear-gradient(to right, #1CB5E0, #000046);
     min-height: 100vh;
-    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
 }
 
 #container {
@@ -16,7 +23,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 10px 15px 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    width: 900px;
+    width: 800px;
     height: 600px;
     padding: 20px;
     text-align: center;
@@ -28,12 +35,12 @@ body {
 .list-header {
     display: flex;
     align-items: left;
-    justify-content: left;
+    justify-content: center;
 }
 
 .blank-div {
     background: #fff;
-    border: none;
+    border: 2px dashed #666;
     padding: 20px;
     border-radius: 8px;
     height: 200px;
@@ -70,8 +77,8 @@ body {
 
 .list-container {
     display: flex;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
 }
 
 ul {
@@ -81,6 +88,8 @@ ul {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 li {
@@ -104,11 +113,11 @@ li span {
     font-weight: 500;
     flex-grow: 1;
     word-wrap: break-word;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #editBtn, #deleteBtn {
-    background: #000046;
+    background: #5a5ad3;
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -128,7 +137,7 @@ li span {
     background: gray;
 }
 
-#deleteBtn {
+#deleteBtn:hover {
     background: #000046;
 }
 
@@ -165,19 +174,29 @@ textarea {
 }
 
 #submitBtn , #closeBtn {
-    width: 100px;
-    background: #000046;
+    width: 150px;
+    background: #3838bd;
     color: #fff;
     font-size: 14px;
+    font-weight: 600;
     border: none;
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
     margin: 10px;
+    transition: .4s ease;
 }
 
 #closeBtn {
     background: gainsboro;
+}
+
+#closeBtn:hover {
+    background: gray;
+}
+
+#submitBtn:hover {
+    background: #000046;
 }
 
 #editing-container {
