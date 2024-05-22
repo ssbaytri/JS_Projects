@@ -1,4 +1,5 @@
-let addNote = document.querySelector(".add-note");
+
+// Create Note Pop up Logic
 
 function popup () {
     const popupContainer = document.createElement("div");
@@ -43,6 +44,7 @@ function createNote() {
     }
 }
 
+// display the Notes
 
 function displayNotes() {
     const notesList = document.getElementById("notes-list");
@@ -62,6 +64,8 @@ function displayNotes() {
         notesList.appendChild(listItem);
     })
 }
+
+// Edit Note Pop up Logic
 
 function editNote(noteId) {
     const notes = JSON.parse(localStorage.getItem("notes")) || [];
@@ -89,6 +93,8 @@ function closeEditPopup() {
     }
 }
 
+// Update the Note
+
 function updateNote() {
     const noteText = document.getElementById("note-text").value.trim();
     const editingPopup = document.getElementById("editing-container");
@@ -97,6 +103,7 @@ function updateNote() {
         const noteId = editingPopup.getAttribute("data-note-id");
         let notes = JSON.parse(localStorage.getItem("notes")) || [];
 
+        // Find the Note to Update
         const updatedNotes = notes.map(note => {
             if(note.id == noteId) {
                 return {id: note.id, text: noteText}
@@ -104,14 +111,17 @@ function updateNote() {
             return note;
         })
 
+        // Update the Note in the Local Storage
         localStorage.setItem("notes", JSON.stringify(updatedNotes))
 
+        // Close the editing Popup
         editingPopup.remove()
 
         displayNotes();
     }
 }
 
+// Delete the Note Logic
 function deleteNote(noteId) {
     let notes = JSON.parse(localStorage.getItem("notes")) || [];
     notes = notes.filter(note => note.id !== noteId)
@@ -121,6 +131,9 @@ function deleteNote(noteId) {
 }
 
 displayNotes();
+
+// handle Note click event
+let addNote = document.querySelector(".add-note");
 
 addNote.onclick = () => {
     popup();
