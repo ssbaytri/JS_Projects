@@ -456,6 +456,12 @@ nav {
 	border-radius: 4px;
 	top: 109%;
 	right: 5%;
+	max-height: 0;
+	transition: all .4s ease;
+}
+
+.settings-menu-height {
+	max-height: 450px;
 }
 
 .user-profile a {
