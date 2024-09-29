@@ -6,8 +6,10 @@
 }
 
 
-@media (width >= 50.625em) {
+@media (width >=50.625em) {
 	.header {
 		padding-block: 24px;
 	}
 }
+
+/* ------------ END OF PROJECT ------------ */

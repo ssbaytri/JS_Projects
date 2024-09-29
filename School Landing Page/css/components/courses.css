@@ -68,9 +68,11 @@
 	}
 }
 
-@media (width >= 75em) {
+@media (width >=75em) {
 	.courses .wrapper {
 		grid-template-columns: repeat(3, 1fr);
 		gap: 84px 32px;
 	}
 }
+
+/* ------------ END OF PROJECT ------------ */

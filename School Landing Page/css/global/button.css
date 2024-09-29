@@ -36,8 +36,10 @@
 	opacity: 0.5;
 }
 
-@media (width >= 75em) {
+@media (width >=75em) {
 	.button {
 		padding: 16px 32px;
 	}
 }
+
+/* ------------ END OF PROJECT ------------ */

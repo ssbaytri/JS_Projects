@@ -54,11 +54,14 @@ img.logo:hover {
 }
 
 .logo {
-	width: 4.955625rem;
+  width: 4.955625rem;
   transition: opacity .3s ease-in-out;
 }
-@media (width >= 75em) {
-	.logo {
-		width: 6.9375rem;
-	}
+
+@media (width >=75em) {
+  .logo {
+    width: 6.9375rem;
+  }
 }
+
+/* ------------ END OF PROJECT ------------ */
