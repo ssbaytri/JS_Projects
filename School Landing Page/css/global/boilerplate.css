@@ -1,5 +1,12 @@
 :root {
-  
+  --color-blue-900: #13183f;
+  --color-blue-600: #666ca3;
+  --color-pink-600: #f74780;
+  --color-pink-300: #ffa7c3;
+  --color-grey: #83869a;
+  --color-white: #fff;
+  --gradient-pink: linear-gradient(#f02aa6, #ff6f48);
+  --gradient-purple: linear-gradient(#4851ff, #f02aff);
 }
 
 *,
@@ -9,12 +16,15 @@
 }
 
 body {
+  font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+  font-weight: 500;
   margin: 0;
 }
 
 h1,
 h2,
 h3 {
+  font-weight: 800;
   margin: 0;
 }
 
