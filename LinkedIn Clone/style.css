@@ -744,3 +744,35 @@ a {
 	border-bottom: 1px solid #999;
 	margin-top: 10px;
 }
+
+.experience-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 20px;
+	font-weight: 500;
+}
+
+.experience-link img {
+	width: 20px;
+	margin-left: 8px;
+}
+
+.skill-btn {
+	display: inline-block;
+	margin: 10px 5px;
+	padding: 6px 18px;
+	border-radius: 30px;
+	border: 1px solid #777;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.lang-btn {
+	display: inline-block;
+	margin: 10px 5px;
+	padding: 6px 18px;
+	background: #e4e6eb;
+	font-size: 12px;
+	font-weight: 500;
+}
