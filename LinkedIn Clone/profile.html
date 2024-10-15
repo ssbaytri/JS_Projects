@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
+	<link rel="stylesheet" href="style.css">
+	<title>LinkedIn Clone</title>
+</head>
+
+<body>
+		<!-------------- NAVBAR ------------->
+	<nav class="navbar">
+		<div class="nav-left">
+			<a href="#" class="logo">
+				<img src="/images/logo.png" alt="logo">
+			</a>
+			<div class="search-box">
+				<img src="/images/search.png" alt="search">
+				<input type="text" placeholder="Search">
+			</div>
+		</div>
+		<div class="nav-center">
+			<ul>
+				<li><a href="#" class="active-link"><img src="/images/home.png" alt="home"> <span>Home</span></a></li>
+				<li><a href="#"><img src="/images/network.png" alt="net"> <span>My Network</span></a></li>
+				<li><a href="#"><img src="/images/jobs.png" alt="jobs"> <span>Jobs</span></a></li>
+				<li><a href="#"><img src="/images/message.png" alt="messages"> <span>Messaging</span></a></li>
+				<li><a href="#"><img src="/images/notification.png" alt="notifs"> <span>Notifications</span></a></li>
+			</ul>
+		</div>
+		<div class="nav-right">
+			<div class="online">
+				<img src="/images/user-1.png" alt="user-1" class="nav-pro-img" onclick="toggleMenu()">
+			</div>
+		</div>
+		<!-------------- PROFILE DROP DOWN MENU ------------->
+		<div class="profile-menu-wrap" id="profile-menu">
+			<div class="profile-menu">
+				<div class="user-info">
+					<img src="/images/user-1.png">
+					<div>
+						<h3>SubZero</h3>
+						<a href="#">See your profile</a>
+					</div>
+				</div>
+				<hr>
+				<a href="#" class="profile-menu-link">
+					<img src="/images/feedback.png">
+					<p>Give Feedback</p>
+					<span>&gt;</span>
+				</a>
+				<a href="#" class="profile-menu-link">
+					<img src="/images/setting.png">
+					<p>Settings &amp; Privacy</p>
+					<span>&gt;</span>
+				</a>
+				<a href="#" class="profile-menu-link">
+					<img src="/images/help.png">
+					<p>Help &amp; Support</p>
+					<span>&gt;</span>
+				</a>
+				<a href="#" class="profile-menu-link">
+					<img src="/images/display.png">
+					<p>Display &amp; Accessibility</p>
+					<span>&gt;</span>
+				</a>
+				<a href="#" class="profile-menu-link">
+					<img src="/images/logout.png">
+					<p>Logout</p>
+					<span>&gt;</span>
+				</a>
+			</div>
+		</div>
+	</nav>
+	<!-------------- MAIN CONTAINER ------------->
+	<div class="container">
+		<div class="profile-main">
+			<div class="profile-container">
+				<img src="images/cover-pic.png" width="100%">
+				<div class="profile-container-inner">
+					<img src="images/user-1.png" class="profile-pic">
+					<h1>SubZero</h1>
+					<b>
+						Founder and CEO of FSociety | E-corps
+					</b>
+					<p>
+						New York, USA &middot; <a href="#">Contact info</a>
+					</p>
+					<div class="mutual-connection">
+						<img src="images/user-2.png">
+						<span>1 mutual connection: Carlos Diego</span>
+					</div>
+					<div class="profile-btn">
+						<a href="#" class="primary-btn"><img src="images/connect.png">Connect</a>
+						<a href="#"><img src="images/chat.png">Message</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="profile-sidebar"></div>
+	</div>
+
+</body>
+<script src="script.js"></script>
+</html>
