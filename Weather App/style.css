@@ -100,3 +100,14 @@ body {
     font-size: 28px;
     margin-top: -6px;
 }
+
+.weather {
+    display: none;
+}
+
+.error {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    display: none;
+}
