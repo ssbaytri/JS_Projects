@@ -16,3 +16,4 @@ function toggleActivity() {
 	}
 }
 
+// ---------------- END OF PROJECT -----------------
