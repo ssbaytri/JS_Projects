@@ -385,3 +385,27 @@ nav .fa-bars {
         font-size: 15px;
     }
 }
+
+/* ------------   listing page  -----------*/
+.navbar-white {
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-white .nav-links li a {
+    color: #000;
+}
+
+.navbar-white .register-btn {
+    background: #ff5361;
+    color: #fff;
+}
+
+.navbar-white .fa-bars {
+    color: #000;
+}
+
+.navbar-white .active::after {
+    background: #ff5361;
+}
+
